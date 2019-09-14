@@ -7,19 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JS Excel</title>
     <style>
+        body {
+            background-color: #eee;
+        }
         #title-part {
             color: yellowgreen;
         }
-        
         .capital {
             font-weight: bolder;
             font-size: 24px;
         }
-        
+        h1, h2 {
+            text-align: center;
+        }
         section.container {
             border: 10px solid indigo;
             padding: 20px;
             max-width: 800px;
+            /* width vs max-width: Check resizing */
+            /* width: 800px; */
             margin-left: auto;
             margin-right: auto;
             /* Comments: Ctrl + / or Cmd + / */
@@ -27,6 +33,8 @@
             margin: 0 auto 0 auto;
             /* margin: top/bottom right/left */
             margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
         }
     </style>
 </head>
@@ -37,8 +45,7 @@
     <section class="container">
 
         <h1>JS <span id="title-part">Sheet</span></h1>
-
-        <h2>Subtitle</h2>
+        <h2>A JS-based Spreadsheet App</h2>
 
         <p><span class="capital">L</span>orem ipsum dolor sit, amet consectetur adipisicing elit. Ad placeat assumenda repellat, laboriosam dolorem fugit et nostrum. Necessitatibus nemo iste ipsum, debitis aperiam at eligendi quo rerum soluta odit magni.</p>
 
