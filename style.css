@@ -1,0 +1,58 @@
+body {
+    background-color: #eee;
+}
+
+#title-part {
+    color: yellowgreen;
+}
+
+.capital {
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+section.container {
+    border: 10px solid indigo;
+    padding: 20px;
+    max-width: 800px;
+    /* width vs max-width: Check resizing */
+    /* width: 800px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* Comments: Ctrl + / or Cmd + / */
+    /* margin: margin-top margin-right margin-bottom margin-left */
+    margin: 0 auto 0 auto;
+    /* margin: top/bottom right/left */
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #ddd;
+}
+
+td {
+    padding: 5px 10px;
+}
+
+th,
+td {
+    border: 1px solid gray;
+}
+.highlighted {
+    background-color: yellow;
+}
