@@ -10,9 +10,14 @@ console.log( unitCol );
 // Syntax: HTMLElement.addEventListener( EVENT:String, CALLBACK:Function );
 unitCol.addEventListener( "input", handleClick );
 
+// 1) When Cell E has been changed: 
 function handleClick( e ){
 
-    console.log( "The Input has been changed!" );
+    // 2) Get value of E
+    let unitsProjected = e.target;
+    let valE = unitsProjected.textContent;
+    valE = parseFloat( valE );  // Convert the text we got from the textContent into a floaring Number
+    console.log( valE );
 
 }
 
