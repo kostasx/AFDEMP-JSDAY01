@@ -22,7 +22,10 @@ function handleClick( e ){
     let D = unitsProjected.previousElementSibling;
     let valD = D.textContent;
     valD = parseFloat( valD );
-    console.log( valD, typeof valD );
+
+    // 5) Calculate E * D and update cell G
+    let G = unitsProjected.nextElementSibling.nextElementSibling;
+    G.textContent = valE * valD;
 
 }
 
