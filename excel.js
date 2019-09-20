@@ -17,7 +17,12 @@ function handleClick( e ){
     let unitsProjected = e.target;
     let valE = unitsProjected.textContent;
     valE = parseFloat( valE );  // Convert the text we got from the textContent into a floaring Number
-    console.log( valE );
+
+    // 4) Get value of cell D 
+    let D = unitsProjected.previousElementSibling;
+    let valD = D.textContent;
+    valD = parseFloat( valD );
+    console.log( valD, typeof valD );
 
 }
 
