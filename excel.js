@@ -25,7 +25,14 @@ function handleClick( e ){
 
     // 5) Calculate E * D and update cell G
     let G = unitsProjected.nextElementSibling.nextElementSibling;
-    G.textContent = valE * valD;
+    console.log( "valE: ", valE, typeof valE );
+    console.log( "valD: ", valD, typeof valD );
+    console.log( Number.isNaN(valE) );
+    if ( Number.isNaN(valE) ){
+        G.textContent = "";
+    } else {
+        G.textContent = valE * valD;
+    }
 
 }
 
