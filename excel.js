@@ -4,11 +4,13 @@ console.log("Running");
 // alert();
 
 let unitCol = document.querySelector("#units");
-console.log( unitCol );
+console.log( "unitCol:", unitCol );
 
 // Adding an Event Listener on our Cell:
 // Syntax: HTMLElement.addEventListener( EVENT:String, CALLBACK:Function );
-unitCol.addEventListener( "input", handleClick );
+if ( unitCol ){
+    unitCol.addEventListener( "input", handleClick );
+}
 
 // 1) When Cell E has been changed: 
 function handleClick( e ){
@@ -35,6 +37,28 @@ function handleClick( e ){
     }
 
 }
+
+//>> HANDLE JSON DATA <<//
+let data = JSON.parse( jsonText );
+console.log( data );
+let tr = `
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+    </tr>
+`;
+// What? Inject <tr> into HTML > tbody
+// 1) Get tbody
+const tbody = document.querySelector("#excel-table tbody");
+// 2) append element to tbody
+tbody.innerHTML += tr;
+
 
 console.log("End of Code");
 // END OF CODE
