@@ -41,24 +41,32 @@ function handleClick( e ){
 //>> HANDLE JSON DATA <<//
 let data = JSON.parse( jsonText );
 console.log( data );
-let tr = `
-    <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-    </tr>
-`;
+
 // What? Inject <tr> into HTML > tbody
 // 1) Get tbody
 const tbody = document.querySelector("#excel-table tbody");
 // 2) append element to tbody
-tbody.innerHTML += tr;
 
+// What? Iterate over JSON list. Append tr + data to tbody.innerHTML
+// 1) Loop over entries
+// 2) inject tr
+function addRow( rowData, index ){
+    let tr = `
+        <tr>
+            <td>${index+2}</td>
+            <td>${rowData.product}</td>
+            <td>${rowData.cost}</td>
+            <td>${rowData.price}</td>
+            <td>${rowData.profit}</td>
+            <td>${rowData.units_projected}</td>
+            <td>${rowData.total_sales}</td>
+            <td>${rowData.total_profit}</td>
+        </tr>
+    `;
+    tbody.innerHTML += tr;
+}
+// addRow( data.entries[0] );
+data.entries.forEach(addRow);
 
 console.log("End of Code");
 // END OF CODE
